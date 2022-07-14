@@ -40,7 +40,7 @@ $("#close").click(function () {
 
 
 async function nowPlaying() {
-    let apiResponse = await fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=0e7f6408ebf5e9c66b81c776bb4679bd');
+    let apiResponse = await fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=d20b2444f990fbb72e09312c55d2105b');
     allMovies = await apiResponse.json();
     allMovies = allMovies.results;
     displayMovies()
@@ -68,7 +68,7 @@ function displayMovies() {
 
 
 async function popular() {
-    let apiResponse = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=0e7f6408ebf5e9c66b81c776bb4679bd');
+    let apiResponse = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=d20b2444f990fbb72e09312c55d2105b');
     allMovies = await apiResponse.json();
     allMovies = allMovies.results;
     displayMovies()
@@ -76,14 +76,14 @@ async function popular() {
 
 
 async function topRated() {
-    let apiResponse = await fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=0e7f6408ebf5e9c66b81c776bb4679bd');
+    let apiResponse = await fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=d20b2444f990fbb72e09312c55d2105b');
     allMovies = await apiResponse.json();
     allMovies = allMovies.results;
     displayMovies()
 }
 
 async function trending() {
-    let apiResponse = await fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=0e7f6408ebf5e9c66b81c776bb4679bd');
+    let apiResponse = await fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=d20b2444f990fbb72e09312c55d2105b');
     allMovies = await apiResponse.json();
     allMovies = allMovies.results;
     displayMovies()
@@ -91,7 +91,7 @@ async function trending() {
 
 
 async function upComing() {
-    let apiResponse = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=0e7f6408ebf5e9c66b81c776bb4679bd');
+    let apiResponse = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=d20b2444f990fbb72e09312c55d2105b');
     allMovies = await apiResponse.json();
     allMovies = allMovies.results;
     displayMovies()
@@ -122,7 +122,7 @@ function searchMovie(searchTerm) {
 
 
 async function searchAll(newSearch) {
-    let movieResponse = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=0e7f6408ebf5e9c66b81c776bb4679bd&query=${newSearch}&include_adult=false`);
+    let movieResponse = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=d20b2444f990fbb72e09312c55d2105b&query=${newSearch}&include_adult=false`);
     newMovies = await movieResponse.json();
     newMovies = newMovies.results;
     let cartoona = ``;
